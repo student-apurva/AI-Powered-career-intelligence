@@ -1,0 +1,404 @@
+/* =========================================================
+   ADMIN SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+  width: 258px;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #184e77;
+  color: white;
+
+  z-index: 1000;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR HEADER
+========================================================= */
+
+.admin-sidebar-header {
+  flex-shrink: 0 !important;
+  height: 88px !important;
+  min-height: 88px !important;
+  max-height: 88px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.admin-sidebar .admin-logo {
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+
+  flex: 0 0 42px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  box-sizing: border-box !important;
+
+  background: #d9ed92 !important;
+  color: #184e77 !important;
+
+  border-radius: 12px !important;
+
+  font-size: 17px !important;
+  font-weight: 800 !important;
+
+  line-height: 1 !important;
+}
+
+.admin-brand {
+  margin-left: 12px;
+}
+
+.admin-brand h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.admin-brand span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU - THIS PART SCROLLS
+========================================================= */
+
+.admin-sidebar-menu {
+  flex: 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 14px 12px;
+}
+
+
+/* Scrollbar */
+
+.admin-sidebar-menu::-webkit-scrollbar {
+  width: 7px;
+}
+
+.admin-sidebar-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.admin-sidebar-menu::-webkit-scrollbar-thumb {
+  background: rgba(217, 237, 146, 0.55);
+  border-radius: 10px;
+}
+
+.admin-sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: #d9ed92;
+}
+
+
+/* Firefox */
+
+.admin-sidebar-menu {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(217, 237, 146, 0.6)
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   MENU ITEM
+========================================================= */
+
+.admin-sidebar-item {
+  width: 100%;
+
+  min-height: 47px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 14px;
+
+  margin-bottom: 5px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-sidebar-item svg {
+  width: 17px;
+  min-width: 17px;
+
+  font-size: 16px;
+}
+
+.admin-sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: white;
+}
+
+
+/* Active menu */
+
+.admin-sidebar-item.active {
+  background: #168aad;
+  color: white;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR FOOTER
+========================================================= */
+
+.admin-sidebar-footer {
+  flex-shrink: 0;
+
+  padding: 12px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: #184e77;
+}
+
+
+/* =========================================================
+   ADMIN USER
+========================================================= */
+
+.admin-user {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 5px 12px;
+}
+
+.admin-user-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #76c893;
+  color: #184e77;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.admin-user-info {
+  min-width: 0;
+}
+
+.admin-user-info strong {
+  display: block;
+
+  color: white;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-user-info span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.admin-logout-btn {
+  width: 100%;
+
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-logout-btn svg {
+  font-size: 15px;
+}
+
+.admin-logout-btn:hover {
+  background: #e53935;
+  border-color: #e53935;
+  color: white;
+}
+
+
+/* =========================================================
+   MAIN CONTENT OFFSET
+========================================================= */
+
+.admin-main {
+  margin-left: 258px;
+
+  min-height: 100vh;
+
+  padding: 30px;
+
+  background: #f4fbfa;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admin-sidebar {
+    width: 220px;
+  }
+
+  .admin-main {
+    margin-left: 220px;
+    padding: 22px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .admin-sidebar {
+    width: 70px;
+  }
+
+  .admin-brand {
+    display: none;
+  }
+
+  .admin-sidebar-header {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .admin-sidebar-item {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .admin-sidebar-item span {
+    display: none;
+  }
+
+  .admin-user {
+    justify-content: center;
+  }
+
+  .admin-user-info {
+    display: none;
+  }
+
+  .admin-logout-btn span {
+    display: none;
+  }
+
+  .admin-main {
+    margin-left: 70px;
+    padding: 18px;
+  }
+
+}
+/* =========================================================
+   FIX SIDEBAR OVERFLOW
+========================================================= */
+
+.admin-sidebar {
+  overflow: hidden !important;
+}
+
+.admin-sidebar-menu {
+  min-height: 0 !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}

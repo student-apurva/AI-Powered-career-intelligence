@@ -1,0 +1,156 @@
+.resume-improvement-page {
+    display:flex;
+    min-height:100vh;
+    background:#F4FBFA;
+}
+.resume-improvement-content{
+    flex:1;
+    margin-left:280px;
+    width:calc(100% - 280px);
+    min-height:100vh;
+    padding:35px 6%;
+}
+.resume-improvement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.resume-section {
+  margin-top: 30px;
+}
+
+.resume-score-section {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+.resume-score-card,
+.overall-feedback-card,
+.component-score-card,
+.priority-card,
+.strength-card,
+.suggestion-card,
+.rewrite-card,
+.skills-organization-card,
+.basic-improvement-card,
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.component-score-grid,
+.suggestion-grid,
+.statistics-grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.component-score-grid {
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.suggestion-grid {
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.statistics-grid {
+  grid-template-columns:
+    repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.score-progress {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.score-progress-fill {
+  height: 100%;
+  background: #168aad;
+}
+
+.priority-card,
+.strength-card,
+.basic-improvement-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.rewrite-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.before-box,
+.after-box {
+  padding: 15px;
+  background: #f8fefd;
+  border-radius: 8px;
+}
+
+.action-verbs,
+.missing-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.action-verb,
+.missing-section-badge,
+.skill-group {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px;
+  background: #e8f5f2;
+  border-radius: 8px;
+}
+
+.priority-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.resume-loading,
+.resume-error {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .resume-score-section {
+    grid-template-columns: 1fr;
+  }
+.resume-improvement-content{
+    margin-left:0;
+    width:100%;
+    padding:20px 4%;
+}
+  .resume-improvement-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .rewrite-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .rewrite-arrow {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+}

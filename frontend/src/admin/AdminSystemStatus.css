@@ -1,0 +1,366 @@
+.system-status-page {
+  min-height: 100vh;
+}
+
+.system-status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.system-status-header h1 {
+  margin: 0;
+  color: #184e77;
+  font-size: 28px;
+}
+
+.system-status-header p {
+  margin: 7px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.refresh-status-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #168aad;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.refresh-status-btn:hover {
+  background: #184e77;
+}
+
+.refresh-status-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.refresh-spinning {
+  animation: statusSpin 1s linear infinite;
+}
+
+@keyframes statusSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Overall */
+
+.overall-status-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 25px;
+
+  margin-bottom: 22px;
+
+  background: white;
+
+  border: 1px solid #e7eeee;
+  border-radius: 15px;
+
+  box-shadow:
+    0 4px 15px rgba(24, 78, 119, 0.05);
+}
+
+.overall-status-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  font-size: 25px;
+}
+
+.overall-status-icon.online {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.overall-status-icon.warning {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.overall-status-icon.offline {
+  background: #ffebee;
+  color: #e53935;
+}
+
+.overall-status-icon.unknown {
+  background: #f5f5f5;
+  color: #777;
+}
+
+.overall-status-card span {
+  color: #777;
+  font-size: 12px;
+}
+
+.overall-status-card h2 {
+  margin: 5px 0;
+
+  color: #184e77;
+
+  font-size: 23px;
+}
+
+.overall-status-card p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 11px;
+}
+
+
+/* Services */
+
+.system-services {
+  padding: 22px;
+
+  margin-bottom: 22px;
+
+  background: white;
+
+  border: 1px solid #e7eeee;
+  border-radius: 15px;
+
+  box-shadow:
+    0 4px 15px rgba(24, 78, 119, 0.05);
+}
+
+.system-section-header h2 {
+  margin: 0;
+
+  color: #184e77;
+
+  font-size: 18px;
+}
+
+.system-section-header p {
+  margin: 5px 0 20px;
+
+  color: #888;
+
+  font-size: 11px;
+}
+
+.services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.service-card {
+  padding: 18px;
+
+  border: 1px solid #e7eeee;
+
+  border-radius: 12px;
+
+  background: #f8fefd;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 7px 18px rgba(24, 78, 119, 0.08);
+}
+
+.service-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.service-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e8f5f4;
+
+  color: #168aad;
+}
+
+.service-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px 8px;
+
+  border-radius: 15px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.service-status.online {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.service-status.warning {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.service-status.offline {
+  background: #ffebee;
+  color: #e53935;
+}
+
+.service-status.unknown {
+  background: #f5f5f5;
+  color: #777;
+}
+
+.service-card h3 {
+  margin: 0 0 5px;
+
+  color: #184e77;
+
+  font-size: 14px;
+}
+
+.service-card p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 11px;
+}
+
+
+/* Response */
+
+.response-time-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px 22px;
+
+  background: white;
+
+  border: 1px solid #e7eeee;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 4px 15px rgba(24, 78, 119, 0.05);
+}
+
+.response-time-card span {
+  color: #777;
+
+  font-size: 12px;
+}
+
+.response-time-card h2 {
+  margin: 5px 0 0;
+
+  color: #184e77;
+
+  font-size: 24px;
+}
+
+.response-time-card > svg {
+  color: #168aad;
+
+  font-size: 25px;
+}
+
+
+/* Error */
+
+.system-status-error {
+  margin-bottom: 18px;
+
+  padding: 12px 15px;
+
+  border-radius: 9px;
+
+  background: #ffebee;
+
+  color: #c62828;
+
+  font-size: 13px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-status-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .overall-status-card {
+    align-items: flex-start;
+  }
+}

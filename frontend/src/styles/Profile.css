@@ -1,0 +1,2107 @@
+/* =====================================================
+   ASCENDRA AI - PROFILE
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+.profile-app{
+    display:flex;
+    align-items:flex-start;
+    min-height:100vh;
+    background:#f4f9f8;
+    color:#263238;
+}
+
+
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.profile-main {
+flex: 1;
+  min-height: 100vh;
+
+  margin-left: 280px;          /* Sidebar width */
+  width: calc(100% - 280px);
+
+  padding: 20px 40px 40px;
+
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.profile-topbar {
+  max-width: 1450px;
+
+  margin: 0 auto 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.page-eyebrow {
+  margin: 0 0 5px;
+
+  color: #168aad;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.profile-topbar h1 {
+  margin: 0;
+
+  color: #184e77;
+
+  font-size: 31px;
+  font-weight: 750;
+}
+
+.page-description {
+  margin: 6px 0 0;
+
+  color: #78909c;
+
+  font-size: 14px;
+}
+
+.top-save-button {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #168aad;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(22, 138, 173, 0.2);
+
+  transition: 0.2s ease;
+}
+
+.top-save-button:hover {
+  background: #1a759f;
+  transform: translateY(-2px);
+}
+
+.top-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =====================================================
+   PROFILE HERO
+===================================================== */
+
+.profile-hero {
+  max-width: 1450px;
+
+  margin: 0 auto 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 28px 32px;
+
+  border: 1px solid #e0eeee;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #ffffff 0%,
+      #f7fdfb 60%,
+      #effaf5 100%
+    );
+
+  box-shadow:
+    0 6px 24px rgba(24, 78, 119, 0.055);
+}
+
+.profile-hero-user {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.large-avatar {
+  min-width: 72px;
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #168aad,
+      #52b69a
+    );
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 22px rgba(22, 138, 173, 0.18);
+}
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.hero-title-row h2 {
+  margin: 0;
+
+  color: #184e77;
+
+  font-size: 22px;
+}
+
+.verified-icon {
+  color: #52b69a;
+}
+
+.hero-user-details p {
+  margin: 5px 0;
+
+  color: #78909c;
+
+  font-size: 13px;
+}
+
+.hero-location {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 3px;
+
+  color: #52727b;
+
+  font-size: 12px;
+}
+
+
+/* Completion */
+
+.completion-panel {
+  width: 360px;
+
+  padding: 17px 20px;
+
+  border: 1px solid #e2efec;
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.completion-text > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completion-text span {
+  color: #526b72;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.completion-text strong {
+  color: #168aad;
+
+  font-size: 19px;
+}
+
+.completion-text p {
+  margin: 6px 0 12px;
+
+  color: #90a4ae;
+
+  font-size: 11px;
+}
+
+.modern-progress {
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #e5efed;
+}
+
+.modern-progress-value {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #34a0a4,
+      #76c893
+    );
+
+  transition: width 0.5s ease;
+}
+
+
+/* =====================================================
+   CONTENT GRID
+===================================================== */
+
+.profile-content-grid {
+  max-width: 1450px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, 0.92fr);
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+.profile-content-left,
+.profile-content-right {
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.profile-section {
+  padding: 25px;
+
+  border: 1px solid #e2eeee;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 20px rgba(24, 78, 119, 0.045);
+
+  transition: 0.2s ease;
+}
+
+.profile-section:hover {
+  border-color: #d3e9e5;
+
+  box-shadow:
+    0 8px 28px rgba(24, 78, 119, 0.07);
+}
+
+.section-heading {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    width: fit-content;
+}
+
+.section-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #ecf8f5;
+    color: #168AAD;
+
+    flex-shrink: 0;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #184e77;
+
+  font-size: 17px;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+
+  color: #90a4ae;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   RESUME
+===================================================== */
+
+.resume-dropzone {
+  padding: 34px 20px;
+
+  border: 2px dashed #b9dcd5;
+  border-radius: 14px;
+
+  background: #fbfefd;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.resume-dropzone:hover {
+  border-color: #52b69a;
+
+  background: #f5fcf9;
+}
+
+.dropzone-icon {
+  width: 54px;
+  height: 54px;
+
+  margin: 0 auto 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #e7f7f2;
+  color: #34a0a4;
+
+  font-size: 21px;
+}
+
+.resume-dropzone h3 {
+  margin: 0 0 5px;
+
+  color: #184e77;
+
+  font-size: 16px;
+}
+
+.resume-dropzone p {
+  margin: 0;
+
+  color: #78909c;
+
+  font-size: 12px;
+}
+
+.resume-dropzone > span {
+  display: block;
+
+  margin: 6px 0 17px;
+
+  color: #a0afb3;
+
+  font-size: 10px;
+}
+
+.resume-dropzone button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #168aad;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* Loader */
+
+.upload-loader {
+  width: 29px;
+  height: 29px;
+
+  margin: 18px auto 0;
+
+  border: 3px solid #dcecea;
+  border-top-color: #168aad;
+  border-radius: 50%;
+
+  animation: resumeSpin 0.7s linear infinite;
+}
+
+@keyframes resumeSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Uploaded Resume */
+
+.uploaded-resume {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px;
+
+  border: 1px solid #dcebe8;
+  border-radius: 13px;
+
+  background: #f9fdfc;
+}
+
+.resume-file-left {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.resume-pdf-icon {
+  min-width: 46px;
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eaf7f4;
+  color: #168aad;
+
+  font-size: 18px;
+}
+
+.resume-file-left strong {
+  display: block;
+
+  max-width: 260px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: #294b54;
+
+  font-size: 13px;
+}
+
+.resume-file-left span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #90a4ae;
+
+  font-size: 10px;
+}
+
+.resume-button-group {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.resume-action {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 8px 11px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.resume-action.view {
+  border: 1px solid #bce3dc;
+
+  background: #edf9f6;
+  color: #168aad;
+}
+
+.resume-action.replace {
+  border: 1px solid #dce7e5;
+
+  background: white;
+  color: #526b72;
+}
+
+.resume-action.delete {
+  border: 1px solid #ffd8d8;
+
+  background: #fff5f5;
+  color: #e53935;
+}
+
+.resume-action:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   PERSONAL FORM
+===================================================== */
+
+.profile-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.profile-field label {
+  display: block;
+
+  margin: 0 0 7px;
+
+  color: #455f67;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon > svg {
+  position: absolute;
+
+  top: 50%;
+  left: 13px;
+
+  transform: translateY(-50%);
+
+  color: #7db7b2;
+
+  font-size: 13px;
+
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 13px 0 39px;
+
+  border: 1px solid #dce9e7;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fbfdfd;
+
+  color: #334e55;
+
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+.input-with-icon input::placeholder {
+  color: #a6b4b8;
+}
+
+.input-with-icon input:focus {
+  border-color: #52b69a;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(82, 182, 154, 0.09);
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.add-skill-row {
+  display: flex;
+
+  gap: 9px;
+}
+
+.add-skill-row input {
+  flex: 1;
+
+  height: 43px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dce9e7;
+  border-radius: 9px;
+
+  outline: none;
+
+  color: #334e55;
+
+  font-size: 12px;
+}
+
+.add-skill-row input:focus {
+  border-color: #52b69a;
+
+  box-shadow:
+    0 0 0 3px rgba(82, 182, 154, 0.08);
+}
+
+.add-skill-row button {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 17px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #168aad;
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.modern-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 17px;
+}
+
+.modern-skill-chip {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 8px 7px 12px;
+
+  border: 1px solid #cce9e3;
+  border-radius: 20px;
+
+  background: #edf9f6;
+  color: #187f83;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.modern-skill-chip button {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #78aaa5;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.modern-skill-chip button:hover {
+  background: #d8efea;
+  color: #184e77;
+}
+
+.empty-text {
+  margin: 0;
+
+  color: #9eadaf;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   DYNAMIC SECTIONS
+===================================================== */
+
+.dynamic-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.modern-dynamic-item {
+  position: relative;
+
+  padding: 13px 13px 13px 44px;
+
+  border: 1px solid #e0ebe9;
+  border-radius: 11px;
+
+  background: #fbfdfd;
+}
+
+.dynamic-number {
+  position: absolute;
+
+  top: 14px;
+  left: 13px;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #e9f6f3;
+  color: #168aad;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.modern-dynamic-item textarea {
+  width: 100%;
+
+  min-height: 92px;
+
+  padding: 5px 34px 5px 4px;
+
+  resize: vertical;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #3e575e;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.modern-dynamic-item textarea::placeholder {
+  color: #a5b2b5;
+}
+
+.dynamic-delete {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #b5c1c3;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.dynamic-delete:hover {
+  background: #fff0f0;
+  color: #e53935;
+}
+
+.add-entry-button {
+  margin-top: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  width: 100%;
+
+  padding: 10px;
+
+  border: 1px dashed #a9d8cf;
+  border-radius: 9px;
+
+  background: #f8fcfb;
+  color: #168aad;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-entry-button:hover {
+  border-color: #52b69a;
+
+  background: #effaf7;
+}
+
+
+/* =====================================================
+   SAVE FOOTER
+===================================================== */
+
+.profile-save-footer {
+  max-width: 1450px;
+
+  margin: 24px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px 25px;
+
+  border: 1px solid #dbeae7;
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow:
+    0 6px 22px rgba(24, 78, 119, 0.05);
+}
+
+.profile-save-footer strong {
+  display: block;
+
+  color: #184e77;
+
+  font-size: 13px;
+}
+
+.profile-save-footer span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #90a4ae;
+
+  font-size: 10px;
+}
+
+.profile-save-footer > button {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 19px;
+
+  border: none;
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #168aad,
+      #34a0a4
+    );
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 16px rgba(22, 138, 173, 0.17);
+}
+
+.profile-save-footer > button:hover {
+  transform: translateY(-1px);
+}
+
+.profile-save-footer > button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .profile-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .completion-panel {
+    width: 310px;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .profile-sidebar {
+    width: 210px;
+  }
+
+  .profile-main{
+    flex:1;
+    margin-left:280px;
+    width:calc(100% - 280px);
+    min-height:100vh;
+}
+
+  .profile-hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .completion-panel {
+    width: 100%;
+  }
+
+  .profile-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .profile-sidebar {
+    position: static;
+
+    width: 100%;
+    height: auto;
+
+    padding: 18px;
+  }
+
+  .sidebar-navigation {
+    margin-top: 25px;
+  }
+
+  .sidebar-bottom {
+    margin-top: 25px;
+  }
+
+.profile-app{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    background:#F4F9F8;
+}
+
+  .profile-main {
+    margin-left: 0;
+
+    padding: 22px 14px 40px;
+  }
+
+  .profile-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-hero-user {
+    align-items: flex-start;
+  }
+
+  .large-avatar {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+  }
+
+  .profile-section {
+    padding: 19px;
+  }
+
+  .uploaded-resume {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resume-button-group {
+    width: 100%;
+  }
+
+  .resume-action {
+    justify-content: center;
+
+    flex: 1;
+  }
+
+  .add-skill-row {
+    flex-direction: column;
+  }
+
+  .add-skill-row button {
+    justify-content: center;
+
+    height: 42px;
+  }
+
+  .profile-save-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-save-footer > button {
+    justify-content: center;
+
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   ASCENDRA AI - PREMIUM HOVER & TRANSITION EFFECTS
+   Add this at the END of Profile.css
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL SMOOTH TRANSITIONS
+========================================================= */
+
+.profile-app button,
+.profile-section,
+.input-with-icon input,
+.add-skill-row input,
+.modern-dynamic-item,
+.modern-skill-chip,
+.resume-dropzone,
+.uploaded-resume,
+.section-icon,
+.large-avatar,
+.sidebar-avatar,
+.nav-item,
+.resume-action,
+.add-entry-button,
+.profile-save-footer,
+.top-save-button,
+.logout-button {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   MAIN PROFILE SECTION CARDS
+========================================================= */
+
+.profile-section {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #e1eeec;
+
+  box-shadow:
+    0 4px 18px rgba(24, 78, 119, 0.045);
+}
+
+
+/* Soft top highlight */
+
+.profile-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #168aad,
+    #34a0a4,
+    #52b69a,
+    #76c893
+  );
+
+  opacity: 0;
+
+  transform: scaleX(0.35);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease;
+}
+
+
+.profile-section:hover {
+  transform: translateY(-4px);
+
+  border-color: #bfe2dc;
+
+  box-shadow:
+    0 12px 32px rgba(24, 78, 119, 0.10);
+}
+
+
+.profile-section:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+
+/* Section icon */
+
+.profile-section:hover .section-icon {
+  background: #168aad;
+  color: #ffffff;
+
+  transform: scale(1.08) rotate(-3deg);
+
+  box-shadow:
+    0 6px 15px rgba(22, 138, 173, 0.20);
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+========================================================= */
+
+.nav-item {
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.nav-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.10),
+    transparent
+  );
+
+  transition: left 0.45s ease;
+}
+
+
+.nav-item:hover::before {
+  left: 100%;
+}
+
+
+.nav-item:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  transform: translateX(5px);
+}
+
+
+.nav-item:hover svg {
+  color: #d9ed92;
+
+  transform: scale(1.12);
+}
+
+
+.nav-item svg {
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.nav-item.active {
+  background: rgba(217, 237, 146, 0.16);
+
+  color: #d9ed92;
+
+  box-shadow:
+    inset 3px 0 0 #d9ed92,
+    0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-button:hover {
+  background: #ffffff;
+
+  color: #184e77;
+
+  border-color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.logout-button:hover svg {
+  transform: translateX(3px);
+}
+
+
+.logout-button svg {
+  transition: transform 0.25s ease;
+}
+
+
+/* =========================================================
+   PROFILE HERO
+========================================================= */
+
+.profile-hero {
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.profile-hero:hover {
+  border-color: #cce6e1;
+
+  box-shadow:
+    0 12px 32px rgba(24, 78, 119, 0.09);
+}
+
+
+/* Avatar */
+
+.large-avatar {
+  cursor: default;
+}
+
+
+.large-avatar:hover {
+  transform: translateY(-3px) scale(1.06);
+
+  box-shadow:
+    0 14px 28px rgba(22, 138, 173, 0.28);
+}
+
+
+/* Sidebar Avatar */
+
+.sidebar-avatar:hover {
+  transform: scale(1.08);
+
+  background: #d9ed92;
+
+  box-shadow:
+    0 5px 15px rgba(217, 237, 146, 0.25);
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.modern-progress {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.modern-progress-value {
+  position: relative;
+
+  background: linear-gradient(
+    90deg,
+    #168aad,
+    #34a0a4,
+    #52b69a,
+    #76c893
+  );
+
+  background-size: 200% 100%;
+
+  animation: progressGradient 4s ease infinite;
+
+  transition: width 0.7s ease;
+}
+
+
+.modern-progress-value::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -80px;
+
+  width: 70px;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+
+  animation: progressShine 2.2s ease-in-out infinite;
+}
+
+
+@keyframes progressGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes progressShine {
+  0% {
+    left: -80px;
+  }
+
+  60%,
+  100% {
+    left: 110%;
+  }
+}
+
+
+/* =========================================================
+   INPUT FIELDS
+========================================================= */
+
+.input-with-icon input {
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+
+.input-with-icon input:hover {
+  border-color: #a8d8cf;
+
+  background: #ffffff;
+}
+
+
+.input-with-icon input:focus {
+  border-color: #34a0a4;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(52, 160, 164, 0.10),
+    0 5px 14px rgba(24, 78, 119, 0.05);
+}
+
+
+.input-with-icon:focus-within > svg {
+  color: #168aad;
+
+  transform:
+    translateY(-50%)
+    scale(1.12);
+}
+
+
+.input-with-icon > svg {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   RESUME UPLOAD DROPZONE
+========================================================= */
+
+.resume-dropzone {
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.resume-dropzone::before {
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  top: -80px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(82, 182, 154, 0.07);
+
+  transition:
+    width 0.4s ease,
+    height 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.resume-dropzone:hover::before {
+  width: 260px;
+  height: 260px;
+
+  background: rgba(82, 182, 154, 0.10);
+}
+
+
+.resume-dropzone:hover {
+  transform: translateY(-3px);
+
+  border-color: #34a0a4;
+
+  background: #f6fcfa;
+
+  box-shadow:
+    0 10px 25px rgba(52, 160, 164, 0.10);
+}
+
+
+.resume-dropzone:hover .dropzone-icon {
+  transform: translateY(-4px) scale(1.08);
+
+  background: #168aad;
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 18px rgba(22, 138, 173, 0.20);
+}
+
+
+.dropzone-icon {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Browse button */
+
+.resume-dropzone button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.resume-dropzone button:hover {
+  background: #1a759f;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px rgba(22, 138, 173, 0.20);
+}
+
+
+/* =========================================================
+   UPLOADED RESUME
+========================================================= */
+
+.uploaded-resume:hover {
+  border-color: #b9ddd7;
+
+  background: #f6fcfa;
+
+  box-shadow:
+    0 8px 20px rgba(24, 78, 119, 0.07);
+
+  transform: translateY(-2px);
+}
+
+
+.uploaded-resume:hover .resume-pdf-icon {
+  background: #168aad;
+  color: white;
+
+  transform: scale(1.07);
+}
+
+
+.resume-pdf-icon {
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.resume-action.view:hover {
+  background: #168aad;
+
+  border-color: #168aad;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(22, 138, 173, 0.20);
+}
+
+
+/* =========================================================
+   REPLACE BUTTON
+========================================================= */
+
+.resume-action.replace:hover {
+  background: #34a0a4;
+
+  border-color: #34a0a4;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(52, 160, 164, 0.20);
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.resume-action.delete:hover {
+  background: #e53935;
+
+  border-color: #e53935;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(229, 57, 53, 0.20);
+}
+
+
+/* =========================================================
+   ADD SKILL INPUT
+========================================================= */
+
+.add-skill-row input:hover {
+  border-color: #a8d8cf;
+
+  background: #ffffff;
+}
+
+
+.add-skill-row input:focus {
+  border-color: #34a0a4;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(52, 160, 164, 0.09);
+}
+
+
+/* =========================================================
+   ADD SKILL BUTTON
+========================================================= */
+
+.add-skill-row button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.add-skill-row button:hover {
+  background: #1a759f;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px rgba(22, 138, 173, 0.20);
+}
+
+
+.add-skill-row button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+
+/* =========================================================
+   SKILL CHIPS
+========================================================= */
+
+.modern-skill-chip:hover {
+  background: #168aad;
+
+  border-color: #168aad;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(22, 138, 173, 0.16);
+}
+
+
+.modern-skill-chip:hover button {
+  background: rgba(255, 255, 255, 0.18);
+
+  color: #ffffff;
+}
+
+
+.modern-skill-chip button:hover {
+  background: #ffffff;
+
+  color: #e53935;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   EDUCATION / EXPERIENCE / PROJECT / CERTIFICATE
+========================================================= */
+
+.modern-dynamic-item {
+  overflow: hidden;
+}
+
+
+.modern-dynamic-item:hover {
+  border-color: #b9ddd7;
+
+  background: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 17px rgba(24, 78, 119, 0.065);
+}
+
+
+.modern-dynamic-item:focus-within {
+  border-color: #52b69a;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(82, 182, 154, 0.08),
+    0 6px 18px rgba(24, 78, 119, 0.06);
+}
+
+
+.modern-dynamic-item:hover .dynamic-number {
+  background: #168aad;
+  color: #ffffff;
+
+  transform: scale(1.08);
+}
+
+
+.dynamic-number {
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   DYNAMIC DELETE BUTTON
+========================================================= */
+
+.dynamic-delete:hover {
+  background: #e53935;
+
+  color: #ffffff;
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 4px 10px rgba(229, 57, 53, 0.18);
+}
+
+
+/* =========================================================
+   ADD EDUCATION / PROJECT / ETC BUTTON
+========================================================= */
+
+.add-entry-button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.add-entry-button:hover {
+  border-color: #34a0a4;
+
+  background: #edf9f6;
+
+  color: #168aad;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 14px rgba(52, 160, 164, 0.09);
+}
+
+
+.add-entry-button:hover svg {
+  transform: rotate(90deg);
+}
+
+
+.add-entry-button svg {
+  transition: transform 0.25s ease;
+}
+
+
+.add-entry-button:active {
+  transform: translateY(0) scale(0.99);
+}
+
+
+/* =========================================================
+   TOP SAVE BUTTON
+========================================================= */
+
+.top-save-button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.top-save-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.55s ease;
+}
+
+
+.top-save-button:hover::before {
+  left: 130%;
+}
+
+
+.top-save-button:hover {
+  background: #1a759f;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 22px rgba(22, 138, 173, 0.27);
+}
+
+
+.top-save-button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+
+/* =========================================================
+   BOTTOM SAVE AREA
+========================================================= */
+
+.profile-save-footer:hover {
+  border-color: #c4e2dd;
+
+  box-shadow:
+    0 10px 28px rgba(24, 78, 119, 0.08);
+}
+
+
+.profile-save-footer > button {
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+
+.profile-save-footer > button:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.04);
+
+  box-shadow:
+    0 10px 22px rgba(22, 138, 173, 0.26);
+}
+
+
+.profile-save-footer > button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+
+/* =========================================================
+   BUTTON ICON EFFECTS
+========================================================= */
+
+.top-save-button svg,
+.profile-save-footer > button svg,
+.resume-action svg,
+.add-skill-row button svg {
+  transition: transform 0.25s ease;
+}
+
+
+.top-save-button:hover svg,
+.profile-save-footer > button:hover svg {
+  transform: scale(1.12);
+}
+
+
+.resume-action.replace:hover svg {
+  transform: rotate(90deg);
+}
+
+
+.resume-action.view:hover svg {
+  transform: scale(1.15);
+}
+
+
+.resume-action.delete:hover svg {
+  transform: scale(1.12);
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+.profile-app ::selection {
+  background: #b5e48c;
+  color: #184e77;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.profile-app * {
+  scrollbar-width: thin;
+  scrollbar-color: #8accc1 #edf5f3;
+}
+
+
+.profile-app *::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+
+.profile-app *::-webkit-scrollbar-track {
+  background: #edf5f3;
+}
+
+
+.profile-app *::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #8accc1;
+}
+
+
+.profile-app *::-webkit-scrollbar-thumb:hover {
+  background: #34a0a4;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY - KEYBOARD FOCUS
+========================================================= */
+
+.profile-app button:focus-visible,
+.profile-app input:focus-visible,
+.profile-app textarea:focus-visible {
+  outline: 2px solid #34a0a4;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION SUPPORT
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .profile-app *,
+  .profile-app *::before,
+  .profile-app *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}

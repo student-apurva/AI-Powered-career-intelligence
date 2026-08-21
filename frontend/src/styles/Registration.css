@@ -1,0 +1,460 @@
+/* =====================================================
+                REGISTRATION PAGE
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#F8FFF5;
+}
+
+/* ===========================
+        PAGE
+=========================== */
+
+.register-page{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(217,237,146,.45),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(22,138,173,.18),
+    transparent 35%),
+
+    linear-gradient(
+    135deg,
+    #F8FFF5,
+    #D9ED92,
+    #99D98C
+    );
+
+}
+
+/* ===========================
+        LEFT SIDE
+=========================== */
+
+.register-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+.register-image{
+
+    width:70%;
+
+    max-width:320px;
+
+    margin-bottom:25px;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.register-left h1{
+
+    font-size:42px;
+
+    color:#184E77;
+
+    margin-bottom:15px;
+
+    font-weight:800;
+
+}
+
+.register-left p{
+
+    max-width:360px;
+
+    font-size:16px;
+
+    color:#5F7483;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+        FORM CARD
+=========================== */
+
+.registration-form{
+
+    width:100%;
+
+    max-width:480px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.5);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.10);
+
+}
+
+/* ===========================
+        TITLE
+=========================== */
+
+.registration-form h2{
+
+    text-align:center;
+
+    font-size:32px;
+
+    color:#184E77;
+
+    margin-bottom:8px;
+
+}
+
+.register-subtitle{
+
+    text-align:center;
+
+    color:#6B7D89;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+        INPUTS
+=========================== */
+
+.form-group{
+
+    margin-bottom:16px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#184E77;
+
+}
+
+.form-group input{
+
+    width:100%;
+
+    padding:13px 16px;
+
+    border-radius:12px;
+
+    border:1px solid #D9ED92;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus{
+
+    outline:none;
+
+    border-color:#168AAD;
+
+    box-shadow:
+    0 0 0 4px rgba(22,138,173,.15);
+
+}
+
+/* ===========================
+        RADIO
+=========================== */
+
+.radio-group{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:8px;
+
+}
+
+.radio-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+        CHECKBOX
+=========================== */
+
+.checkbox-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:18px 0;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+        BUTTON
+=========================== */
+
+.registration-form button[type="submit"]{
+
+    width:200px;
+
+    margin:20px auto;
+
+    display:block;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+    135deg,
+    #52B69A,
+    #168AAD
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+    0 12px 25px rgba(22,138,173,.25);
+
+}
+
+.registration-form button[type="submit"]:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 35px rgba(22,138,173,.30);
+
+}
+
+/* ===========================
+        LOGIN
+=========================== */
+
+.login-text{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#5F7483;
+
+    font-size:14px;
+
+}
+
+.login-btn{
+
+    background:none;
+
+    border:none;
+
+    color:#168AAD;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    margin-left:6px;
+
+}
+
+.login-btn:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+        ANIMATION
+=========================== */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+        MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+.register-page{
+
+grid-template-columns:1fr;
+
+padding:30px;
+
+}
+
+.register-left{
+
+display:none;
+
+}
+
+.registration-form{
+
+max-width:430px;
+
+padding:30px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.registration-form{
+
+padding:22px;
+
+}
+
+.registration-form h2{
+
+font-size:28px;
+
+}
+
+.registration-form button[type="submit"]{
+
+width:100%;
+
+}
+
+.radio-group{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+}
+
+.password-note{
+    display:block;
+    margin-top:6px;
+    font-size:12px;
+    color:#6B7280;
+    line-height:1.4;
+}
+.password-field{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.password-field input{
+    width:100%;
+    padding-right:45px;
+}
+
+.password-toggle{
+    position:absolute;
+    right:15px;
+    cursor:pointer;
+    color:#666;
+    font-size:18px;
+    transition:.3s;
+}
+
+.password-toggle:hover{
+    color:#2563eb;
+}

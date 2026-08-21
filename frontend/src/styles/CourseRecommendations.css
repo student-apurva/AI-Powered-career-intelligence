@@ -1,0 +1,715 @@
+/* =========================================
+   PAGE
+========================================= */
+
+.course-page {
+
+  
+  color: #333333;
+    display:flex;
+    min-height:100vh;
+    background:#F4FBFA;
+}
+
+.course-content{
+    flex:1;
+    margin-left:280px;
+    width:calc(100% - 280px);
+    min-height:100vh;
+    padding:35px 6%;
+}
+/* =========================================
+   HEADER
+========================================= */
+
+.course-header {
+  max-width: 1250px;
+  margin: 0 auto 30px;
+  padding: 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3f1ed;
+  border-radius: 22px;
+
+  box-shadow:
+    0 12px 35px rgba(24, 78, 119, 0.08);
+}
+
+.course-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: #168aad;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.course-header h1 {
+  margin: 0 0 10px;
+
+  color: #184e77;
+
+  font-size: 36px;
+}
+
+.course-header p {
+  max-width: 720px;
+  margin: 0;
+
+  color: #666666;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.learning-profile {
+  max-width: 1250px;
+  margin: 0 auto 45px;
+
+  display: grid;
+  grid-template-columns:
+    0.8fr 1.2fr 1.2fr;
+
+  gap: 18px;
+}
+
+.profile-card {
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4f0ed;
+  border-radius: 18px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 30px rgba(24, 78, 119, 0.1);
+}
+
+.profile-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #666666;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.profile-card h3 {
+  margin: 0;
+
+  color: #184e77;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skill-list,
+.course-skills,
+.path-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip,
+.course-skills span,
+.path-skills span {
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.skill-chip.current {
+  color: #184e77;
+  background: #e8f5f4;
+}
+
+.skill-chip.target {
+  color: #2e7d32;
+  background: #edf8df;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.course-section {
+  max-width: 1250px;
+  margin: 0 auto 55px;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.section-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-number {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #184e77;
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #184e77;
+
+  font-size: 26px;
+}
+
+.section-heading p {
+  max-width: 470px;
+  margin: 0;
+
+  color: #666666;
+
+  text-align: right;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   COURSE CARDS
+========================================= */
+
+.course-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.course-card {
+  padding: 23px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #e2efec;
+  border-radius: 19px;
+
+  box-shadow:
+    0 8px 24px rgba(24, 78, 119, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #76c893;
+
+  box-shadow:
+    0 17px 38px rgba(24, 78, 119, 0.12);
+}
+
+.course-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.course-rank {
+  color: #168aad;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.match-badge {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #e9f8df;
+  color: #2e7d32;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.course-card h3 {
+  margin: 0 0 12px;
+
+  color: #184e77;
+
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-bottom: 10px;
+
+  color: #666666;
+
+  font-size: 13px;
+}
+
+.course-meta span + span::before {
+  content: "•";
+  margin-right: 8px;
+}
+
+.course-category {
+  margin: 0 0 15px;
+
+  color: #168aad;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.course-skills {
+  margin-bottom: 20px;
+}
+
+.course-skills span {
+  background: #f1f8f6;
+  color: #34a0a4;
+}
+
+.start-course-btn {
+  width: 100%;
+
+  margin-top: auto;
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #184e77;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.start-course-btn:hover {
+  background: #168aad;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LEARNING PATH
+========================================= */
+
+.path-section {
+  padding-top: 10px;
+}
+
+.learning-path {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2efec;
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 30px rgba(24, 78, 119, 0.07);
+}
+
+.path-item {
+  display: grid;
+
+  grid-template-columns:
+    65px 1fr;
+}
+
+.path-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-circle {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #184e77,
+      #34a0a4
+    );
+
+  color: #ffffff;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 18px rgba(52, 160, 164, 0.25);
+}
+
+.path-line {
+  width: 3px;
+  flex: 1;
+
+  min-height: 150px;
+
+  background:
+    linear-gradient(
+      #76c893,
+      #d9ed92
+    );
+}
+
+.path-content {
+  padding: 2px 0 35px 10px;
+}
+
+.path-step-label {
+  color: #168aad;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.path-content h3 {
+  margin: 6px 0 8px;
+
+  color: #184e77;
+
+  font-size: 21px;
+}
+
+.path-goal {
+  margin: 0 0 14px;
+
+  color: #666666;
+
+  line-height: 1.65;
+}
+
+.path-skills {
+  margin-bottom: 18px;
+}
+
+.path-skills span {
+  background: #eef9f5;
+  color: #2e7d32;
+}
+
+
+/* =========================================
+   PATH COURSE
+========================================= */
+
+.path-course {
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: #f8fefd;
+
+  border: 1px solid #dcefeb;
+  border-radius: 14px;
+}
+
+.path-course-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #34a0a4;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.path-course h4 {
+  margin: 0 0 5px;
+
+  color: #184e77;
+
+  font-size: 16px;
+}
+
+.path-course p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 13px;
+}
+
+.path-course-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.path-match {
+  color: #2e7d32;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.path-course button {
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #34a0a4;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.path-course button:hover {
+  background: #168aad;
+  transform: translateY(-2px);
+}
+
+.no-path-course {
+  padding: 13px 15px;
+
+  background: #f8f8f8;
+
+  border-radius: 10px;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   LOADING / ERROR / EMPTY
+========================================= */
+
+.course-loading,
+.course-error,
+.empty-card {
+  max-width: 650px;
+
+  margin: 100px auto;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(24, 78, 119, 0.08);
+}
+
+.course-loading h2,
+.course-error h2,
+.empty-card h3 {
+  color: #184e77;
+}
+
+.course-loading p,
+.course-error p,
+.empty-card p,
+.empty-text {
+  color: #666666;
+}
+
+.course-spinner {
+  width: 45px;
+  height: 45px;
+
+  margin: 0 auto 20px;
+
+  border: 4px solid #dcefeb;
+  border-top-color: #168aad;
+
+  border-radius: 50%;
+
+  animation:
+    course-spin 0.8s linear infinite;
+}
+
+@keyframes course-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.course-error button {
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #184e77;
+  color: white;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .course-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .learning-profile {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .course-page {
+    padding:
+      25px 4% 50px;
+  }
+.course-content{
+    margin-left:0;
+    width:100%;
+    padding:20px 4%;
+}
+  .course-header {
+    padding: 25px;
+  }
+
+  .course-header h1 {
+    font-size: 29px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section-heading p {
+    text-align: left;
+  }
+
+  .learning-path {
+    padding: 20px 14px;
+  }
+
+  .path-item {
+    grid-template-columns:
+      52px 1fr;
+  }
+
+  .path-course {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .path-course-actions {
+    width: 100%;
+
+    justify-content:
+      space-between;
+  }
+}

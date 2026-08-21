@@ -1,0 +1,534 @@
+/* ======================================================
+   PAGE LAYOUT
+====================================================== */
+
+.career-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#F4FBFA;
+
+}
+
+/* ======================================================
+   CONTENT AREA
+   (Adjust 280px if your sidebar width is different)
+====================================================== */
+
+.career-content{
+
+     margin-left:280px;
+
+    width:calc(100% - 280px);
+
+    padding:15px;
+
+    min-height:100vh;
+
+    transition:.3s;
+
+    overflow-x:hidden;
+
+}
+
+/* ======================================================
+   MAIN CONTAINER
+====================================================== */
+
+.career-container{
+
+    width:100%;
+
+    max-width:1700px;
+
+    margin:auto;
+
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.career-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.career-badge{
+
+    display:inline-block;
+
+    background:#E8F8F7;
+
+    color:#168AAD;
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.career-header h1{
+
+    font-size:52px;
+
+    color:#184E77;
+
+    margin-bottom:12px;
+
+}
+
+.career-header p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+/* ======================================================
+   PROFILE SUMMARY
+====================================================== */
+
+.profile-analysis-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    border:1px solid #DCECEC;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.analysis-heading{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+}
+
+.analysis-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    background:linear-gradient(135deg,#168AAD,#34A0A4);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+}
+
+.analysis-stats{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.analysis-stat{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:14px;
+
+    background:#F8FEFD;
+
+    border:1px solid #DCECEC;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.analysis-stat strong{
+
+    color:#168AAD;
+
+    font-size:28px;
+
+}
+
+.analysis-stat span{
+
+    font-size:12px;
+
+    color:#666;
+
+}
+
+/* ======================================================
+   RECOMMENDATION HEADER
+====================================================== */
+
+.recommendation-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:40px 0;
+
+}
+
+.regenerate-btn{
+
+    background:#168AAD;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+/* ======================================================
+   GRID
+====================================================== */
+
+.career-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2, minmax(500px, 1fr));
+
+    gap:35px;
+
+    width:100%;
+
+}
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.career-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    border:1px solid #DCECEC;
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:50px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.career-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.08);
+
+}
+
+.career-card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.career-card h2{
+
+    color:#184E77;
+
+    font-size:34px;
+
+    line-height:1.3;
+
+}
+
+/* ======================================================
+   MATCH
+====================================================== */
+
+.match-badge{
+
+    background:#D9ED92;
+
+    color:#2E7D32;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+}
+
+.high-match{
+
+    background:#D9ED92;
+
+}
+
+.medium-match{
+
+    background:#FFF4D6;
+
+    color:#E69500;
+
+}
+
+.low-match{
+
+    background:#FFE4E6;
+
+    color:#D32F2F;
+
+}
+
+/* ======================================================
+   PROGRESS
+====================================================== */
+
+.match-progress{
+
+    height:10px;
+
+    background:#E8F4F6;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.match-progress-bar{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#34A0A4,#168AAD);
+
+}
+
+/* ======================================================
+   SECTION
+====================================================== */
+
+.career-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.career-section h3{
+
+    color:#184E77;
+
+    font-size:22px;
+
+}
+
+.career-section p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    text-align:justify;
+
+}
+
+/* ======================================================
+   TAGS
+====================================================== */
+
+.career-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.career-tag{
+
+    padding:8px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.career-tag.matched{
+
+    background:#E8F8F7;
+
+    color:#168AAD;
+
+}
+
+.career-tag.improve{
+
+    background:#FFF4E5;
+
+    color:#EF6C00;
+
+}
+
+/* ======================================================
+   ROADMAP
+====================================================== */
+
+.roadmap-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.roadmap-item{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+}
+
+.roadmap-number{
+
+    width:32px;
+
+    height:32px;
+
+    border-radius:50%;
+
+    background:#168AAD;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:992px){
+
+    .career-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .profile-analysis-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .analysis-stats{
+
+        flex-wrap:wrap;
+
+    }
+
+    .career-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
